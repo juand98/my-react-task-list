@@ -1,0 +1,5 @@
+Data.json
+
+Dentro de este archivo tendremos una lista de tareas por defecto para nuestra aplicación. Es un arreglo de objetos, cada objeto tiene un id, una tarea y un status el cual nos describe si la tarea es completada o no. 
+
+
