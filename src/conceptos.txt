@@ -2,4 +2,5 @@ Data.json
 
 Dentro de este archivo tendremos una lista de tareas por defecto para nuestra aplicación. Es un arreglo de objetos, cada objeto tiene un id, una tarea y un status el cual nos describe si la tarea es completada o no. 
 
-
+//Usaremos el hook "useState", que nos permitirá inicializar y cambiar cierta información o estado relacionado al componente. Gracias a la extensión automáticamente este se importa en nuestro archivo. Recordemos que en los corchetess, como primer parámetro asignamos un nombre a la información con la cual vamos a trabajar, en este caso todos (tareas, english). Como segundo parámetro usamos el set para poder cambiar o actulizar la lista de tareas.
+// Por defecto esta lista tendrá unos valores, previamente creados en "data.json", un arreglo de objetos predeterminados para la lista de tareas. Debemos importarlo en nuestro código para ser usado posteriormente.
