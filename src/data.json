@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "task": "compras",
+    "task": "JavaScript",
     "completed": false
   },
   {
     "id": 2,
-    "task": "Lavar carro",
+    "task": "HTML",
     "completed": false
   },
   {
     "id": 3,
-    "task": "Cocinar",
+    "task": "Estudiar React",
     "completed": true
   },
   {
     "id": 4,
-    "task": "Lavar ropa",
+    "task": "Tailwind",
     "completed": false
   }
 ]
