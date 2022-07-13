@@ -8,9 +8,13 @@ function App() {
   const [todos, setTodos] = useState(data);
   // Por defecto esta lista tendrá unos valores, previamente creados en "data.json", un arreglo de objetos predeterminados para la lista de tareas. Debemos importarlo en nuestro código para ser usado posteriormente.
 
+  const onComplete = (id) => {
+    console.log("Task", id);
+  };
+
   return (
     <div className="container">
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onComplete={onComplete} />
     </div>
   );
 }
