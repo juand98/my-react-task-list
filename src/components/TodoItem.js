@@ -30,7 +30,9 @@ export default function TodoItem({ todo, onComplete }) {
         onChange={() => onComplete(todo.id)}
       />
       {todo.task}
-      <button className="add-btn">X</button>
+      <button className="add-btn" onClick={() => onDeleteItem(todo.id)}>
+        X
+      </button>
     </div>
   );
 }
@@ -38,4 +40,14 @@ export default function TodoItem({ todo, onComplete }) {
 {
   /* El atributo checked de la etiqueta input es un atributo booleano, cuando está presente especifica que un input debe marcarse cuando se carga la pagina. En este caso, este atributo va a varia en funcion de la propiedad completed, es decir si el valor de la propiedad "completed" es verdad se marca el checkbox al cargar la página */
   /* Usamos tambien para la etiqueta input un evento, el evento onChange, el cual recibe una función. Esa función se va a encargar de enviar el numero de id de la tarea y de esa manera marcarlo como completado o no. A esta función le llamaremos onComplete (el nombre puede ser cualquiera). Para poder enviar el id, como parametro de la función indicamos (todo.id). Como este lo estamos agregando como parte del props tenemos que indicarlo en los props del componente. Además como o estamos enviando al componente padre, en ese componente ("TodoList.js") Asignamos esta función como atributo al componente hijo y así funciaonará como un prop  */
+}
+
+{
+  /* 
+
+  Agregrar funcionalidad al botón para eliminar una tarea.
+
+  
+
+*/
 }
