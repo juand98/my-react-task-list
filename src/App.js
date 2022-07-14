@@ -10,13 +10,44 @@ function App() {
 
   const onComplete = (id) => {
     console.log("Task", id);
+    setTodos(
+      todos.map((tarea) => {
+        return tarea.id === Number(id)
+          ? { ...tarea, completed: true }
+          : { ...tarea };
+      })
+    );
+
+    /* todos.map((tarea) => {
+      return tarea.id === Number(id)
+        ? { ...tarea, completed: true }
+        : { ...tarea };
+    }); */
   };
+
+  {
+    /* Como parámetro de la función usamos el parámetro general "id" que hace referencia a cada id de cada tarea. Recordemos que en el componente "TodoItem.js" estamos enviando el id de la tarea. Notemos que al presionar cada tarea que está predeterminanda, en consola veremos el nombre de la tarea y el id correspondiente de cada tarea. Notemos que en este momento al clickear sobre el checkbox, la flecha de marcado no completa el recuadro para ello harémos una iteración sobre cada elemento de la lista y analizaremos el id que estamos recibiendo en esta función. Esta iteracion recibirá la siguiente instrucción: revisará el id de cada tarea que se encuentra en el "State" es igual al id que estamos recibiendo (Number() nos ayuda a verificar que estamos trabajando con un número entero). Si el "id" que estamos recibiendo es igual a algún id de las tareas que tenemos en el "state" crearemos un objeto 
+    
+    Si el "id" que estamos recibiendo es igual a algún id de las tareas que tenemos en el "state" crearemos un objeto. Si es igual creamos una copia del objeto original y actualizamos la propiedad "completed" a true.
+
+    Si el "id" que recibimos no es igual a algún id de las tareas que tenemos en el state. Solo vamos a pasar una copia del objeto original.
+
+    Resumen onComplete: estamos analizando el "id" que viene desde el componente hijo y estamos diciendo que si ese "id" es igual al "id" de alguna de las tareas que se encuentran en el "state": si es igual creamos un nuevo objeto creando una nueva copia de la tarea actual (...todo) y actualizaremos a la propiedad "completed" por "true". De otro modo simplemente creamos una copia de la tarea actual. SI LA TAREA YA ESTÁ EN EL "STATE", SI YA ES AGREGADA PREVIAMENTE ENTONCES ESTA GENERA UN ID, AL ESTAR AGREGADO SE VERIFICA AL MOMENTO DE CLICKEAR SOBRE LA TAREA QUE EL ID SEA UN ENTERO Y QUE EL ID QUE GENERA SEA IGUAL AL DE LA TAREA DENTRO DEL "STATE" PARA ASÍ VALIDAR QUE LA TAREA YA EXISTE Y FUE COMPLETADA CON EL EVENTO DEL CLICK. 
+
+    Finalmente sabemos que .map nos retorna un nuevo arreglo y por simplicidad almacenamos todo en una variable. Usamos setTodos que es prácticamente lo mismo.
+    
+    */
+  }
 
   return (
     <div className="container">
       <TodoList todos={todos} onComplete={onComplete} />
     </div>
   );
+}
+
+{
+  /* Asignamos como prop "onComplete" que es la función que nos ayudará a enviar el id de cada tarea */
 }
 
 export default App;

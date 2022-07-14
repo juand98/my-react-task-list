@@ -14,3 +14,7 @@ export default function TodoList({ todos, onComplete }) {
     </div>
   );
 }
+
+{
+  /* El atributo onComplete fue asignado al componente hijo como propiedad y esta es la función que nos ayudará a enviar el id de cada tarea de la lista, en App.js creamos esta función, debemos poner como parámetro en este archivo también la función agregada como propiedad en el elemento padre para acceder a ella. */
+}
