@@ -13,8 +13,11 @@ function App() {
     setTodos(
       todos.map((tarea) => {
         return tarea.id === Number(id)
-          ? { ...tarea, completed: true }
+          ? { ...tarea, completed: !tarea.completed }
           : { ...tarea };
+        {
+          /* CORRECCIÓN (NO ES {...tarea, completed: true}): la actualización de la propiedad completed de cada tarea no puede ser "true" por que nosotros debemos cambiarle el valor siempre al valor opuesto del valor original de la propiedad, es decir, si es true, cambiar a false y viceversa. Se hace a través de la sintaxis descrita arriba (!tarea.completed: si el valor actual de la tarea es verdad, debemos actualizarlo por false y si el valor es false, debemos  actualizarlo por lo opuesto). */
+        }
       })
     );
 
