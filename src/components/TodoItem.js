@@ -4,7 +4,7 @@ import React from "react";
   /* Recordemos que este componente tiene dos propiedades previamente definidas como atributo, la estamos pasando como un {} */
 }
 
-export default function TodoItem({ todo, onComplete }) {
+export default function TodoItem({ todo, onComplete, onDeleteItem }) {
   {
     /* A cada tarea le daremos un estilo, para esto usamos el atributo style dentro de la etiqueta div y dentro de este usamos la función "getStyle" que ejecutaremos para dar estilos  */
   }
@@ -47,7 +47,7 @@ export default function TodoItem({ todo, onComplete }) {
 
   Agregrar funcionalidad al botón para eliminar una tarea.
 
-  
+  Agregamos un evento "onClick" para ello usaremos una arrow function, la cual llamaremos "onDeleteItem()", el nombre para esta puede ser cualquiera. A esta función le pasaremos de nuevo el "id" de la tarea (todo.id). De esta manera estamos enviando el id hacia el componente padre. Reordemos que el componente "TodoItem.js" es el componente hijo del componente "TodoList.js" por lo tanto en el componente "TodoList.js" asignamos esta funcion como atributo y añadir a la lista de props al igual que en el componente "App.js"   
 
 */
 }

@@ -42,15 +42,41 @@ function App() {
     */
   }
 
+  const onDeleteItem = (id) => {
+    console.log("Delete", id);
+    setTodos([...todos].filter((tarea) => tarea.id !== id));
+  };
+
   return (
     <div className="container">
-      <TodoList todos={todos} onComplete={onComplete} />
+      <h1>TASK LIST</h1>
+      <TodoList
+        todos={todos}
+        onComplete={onComplete}
+        onDeleteItem={onDeleteItem}
+      />
     </div>
   );
 }
 
 {
-  /* Asignamos como prop "onComplete" que es la función que nos ayudará a enviar el id de cada tarea */
+  /* Asignamos como prop "onComplete" que es la función que nos ayudará a enviar el id de cada tarea y lo declaramos en este mismo archivo */
+}
+{
+  /* Asignamos como prop "onDeleteItem" que es la función que nos ayudará a enviar el id de cada tarea y lo declaramos en este mismo archivo
+  
+  función onDeleteItem.
+  En primer lugar crearemos una copia de la lista todo que tenemos, luego lo filtramos utilizando .filter
+  La instrucción en el método será que si el "id" de las tareas que ya tenemos en el "state" es diferente al "id" que le estamos recibiendo no lo tendremos en cuenta y ede esa manera actualizar la lista de tareas. Resumen: estamos iterando a la lista de todos que está en el "state" que tenemos y estamos diciendo que si algunos de las tareas tiene el "id" diferente al "id" que estamos recibiendo utilizaremos esta tarea y la tarea que tenga el "id" que estamos recibiendo lo dejaremos afuera, lo eliminaremos. 
+  Para actualizar el "state" usamos setTodos
+  
+  */
+}
+
+{
+  /* Agregar tarea a la lista:
+
+*/
 }
 
 export default App;
