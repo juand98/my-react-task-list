@@ -3,6 +3,7 @@ import data from "./data.json";
 import "./App.css";
 import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
+import TodoHeader from "./components/TodoHeader";
 
 function App() {
   //Usaremos el hook "useState", que nos permitirá inicializar y cambiar cierta información o estado relacionado al componente. Gracias a la extensión automáticamente este se importa en nuestro archivo. Recordemos que en los corchetess, como primer parámetro asignamos un nombre a la información con la cual vamos a trabajar, en este caso todos (tareas, english). Como segundo parámetro usamos el set para poder cambiar o actulizar la lista de tareas.
@@ -50,6 +51,7 @@ function App() {
 
   return (
     <div className="container">
+      <TodoHeader />
       <h1>TASK LIST</h1>
       <TodoForm />
       <TodoList
