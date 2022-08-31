@@ -52,7 +52,6 @@ function App() {
   return (
     <div className="container">
       <TodoHeader />
-      <h1>TASK LIST</h1>
       <TodoForm />
       <TodoList
         todos={todos}

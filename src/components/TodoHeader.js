@@ -1,9 +1,18 @@
 import React from "react";
 
-export default function TodoHeader() {
+function TodoHeader() {
+  const getStyleHeader = () => {
+    return {
+      color: "#fff",
+      margin: "auto 10px",
+      textAlign: "center",
+    };
+  };
   return (
     <div>
-      <h1>HEADER</h1>
+      <h1 style={getStyleHeader()}>Task List</h1>
     </div>
   );
 }
+
+export default TodoHeader;
